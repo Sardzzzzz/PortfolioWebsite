@@ -142,7 +142,7 @@ export default function Hero() {
             </p>
 
             <p className="text-xl sm:text-2xl text-gray-300 max-w-xl leading-[1.7]">
-              I’m a passionate developer who builds freaky, interactive, and modern websites that stand out.
+              I’m a passionate developer who builds informative, interactive, and modern websites that stand out.
             </p>
           </div>
 
