@@ -320,30 +320,30 @@ export default function Hero() {
                 <span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-indigo-600 rounded-full ring-8 ring-black">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </span>
-                <h4 className="text-lg font-semibold text-white">Master AI & Machine Learning</h4>
+                <h4 className="text-lg font-semibold text-white">TBA</h4>
                 <time className="block mb-2 text-sm font-normal leading-none text-gray-400">2025</time>
                 <p className="text-gray-300">
-                  Continue expanding AI & ML skills to build smarter applications and explore advanced algorithms.
+                  TBA
                 </p>
               </li>
               <li className="mb-10 ml-6">
                 <span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-indigo-600 rounded-full ring-8 ring-black">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </span>
-                <h4 className="text-lg font-semibold text-white">Open Source Contributions</h4>
+                <h4 className="text-lg font-semibold text-white">TBA</h4>
                 <time className="block mb-2 text-sm font-normal leading-none text-gray-400">2026</time>
                 <p className="text-gray-300">
-                  Actively contribute to open-source projects and create libraries to help the developer community.
+                  TBA
                 </p>
               </li>
               <li className="mb-10 ml-6">
                 <span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-indigo-600 rounded-full ring-8 ring-black">
                   <div className="w-3 h-3 bg-white rounded-full"></div>
                 </span>
-                <h4 className="text-lg font-semibold text-white">Mobile App Development</h4>
+                <h4 className="text-lg font-semibold text-white">TBA</h4>
                 <time className="block mb-2 text-sm font-normal leading-none text-gray-400">2027</time>
                 <p className="text-gray-300">
-                  Learn and build mobile applications using React Native and Flutter for cross-platform support.
+                  TBA
                 </p>
               </li>
             </ol>
@@ -370,7 +370,7 @@ export default function Hero() {
             </h4>
             <p className="text-gray-300 mb-2">University of Example — 2018 to 2022</p>
             <p className="text-gray-300">
-              Graduated with honors. Specialized in software engineering, data structures, and artificial intelligence. Participated in coding competitions and student tech clubs.
+              Graduated with honors. TBA
             </p>
           </div>
         </motion.div>
