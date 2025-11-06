@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import ParticlesBackground from "./ParticlesBackground";
 import { useEffect, useState, useRef } from "react";
 import { FaPython, FaJava, FaJsSquare, FaHtml5 } from "react-icons/fa";
+import { FaBriefcase } from "react-icons/fa";
 
-//Custom hook for the typing effect
+//Typing effect
 const useTyping = (words, typeSpeed = 250, pause = 2000) => {
   const [displayed, setDisplayed] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -89,22 +90,21 @@ function LanguageCard({ icon, name }) {
         className="relative cursor-pointer bg-gray-900 bg-opacity-40 backdrop-blur-md flex flex-col items-center justify-center text-white rounded-3xl w-full h-full px-6 py-8 shadow-lg"
         style={style}
       >
-        <div className="text-[8rem] mb-8 drop-shadow-lg">{icon}</div>
+        <div style={{ fontSize: "128px" }} className="mb-8 drop-shadow-lg">{icon}</div>
         <h4 className="text-4xl font-semibold tracking-wide">{name}</h4>
       </div>
     </div>
   );
 }
 
-//Changed this to a shapeless gif display
 function ContactCard({ gifSrc }) {
   return (
     <div className="flex justify-center items-center h-full">
       <img
         src="/bowl.gif"
         alt="Partner"
-        className="max-w-full h-auto object-contain" //Ensures GIF scales within its container, acts like it's following you for a bit.
-        style={{ maxWidth: "550px" }}
+        className="max-w-full h-auto object-contain"
+        style={{ maxWidth: "400px" }}
       />
     </div>
   );
@@ -125,19 +125,19 @@ export default function Hero() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className="max-w-4xl flex items-center justify-between gap-16"
-        >
+          className="max-w-4xl flex items-center justify-between gap-16">
 
           <div className="flex-1">
             <h1
-              className="text-[7.5rem] sm:text-[8.5rem] md:text-[9.5rem] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 leading-[1.05] tracking-tight"
-            >
+              style={{ fontSize: "140px" }}
+              className="sm:text-[8.5rem] md:text-[9.5rem] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 leading-[1.05] tracking-tight">
               <span style={{ whiteSpace: "nowrap" }}>Hey, I'm</span>
               <br />
               <span className="text-white">Kurt Sardes!</span>
             </h1>
 
-            <p className="text-5xl sm:text-6xl font-semibold mb-6 mt-6 max-w-xl">
+            <p style={{ fontSize: "56px" }}
+              className="sm:text-6xl font-semibold mb-6 mt-6 max-w-xl">
               I do <span>{typed}</span>
             </p>
 
@@ -154,16 +154,14 @@ export default function Hero() {
               padding: "8px",
               background:
                 "conic-gradient(from 45deg, #8b5cf6, #a855f7, #06b6d4, #8b5cf6)",
-            }}
-          >
+            }}>
 
             <div className="w-full h-full rounded-full overflow-hidden bg-white">
               <img
                 src="/kurt1.png"
                 alt="Kurt Sardes"
                 className="w-full h-full object-cover rounded-full"
-                draggable={false}
-              />
+                draggable={false} />
             </div>
           </div>
         </motion.div>
@@ -172,8 +170,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.3 }}
-          className="mt-28 max-w-xl"
-        >
+          className="mt-28 max-w-xl">
           <h3 className="uppercase tracking-widest font-semibold text-[#8b5cf6] text-xs mb-2">
             Introduction
           </h3>
@@ -182,7 +179,7 @@ export default function Hero() {
             Overview
           </h2>
 
-          <p className="text-lg sm:text-xl text-gray-300 leading-[1.75]">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-xl leading-[1.7]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </motion.div>
@@ -191,76 +188,90 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.6 }}
-          className="mt-20 max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-120 gap-y-24 justify-start pb-24"
-        >
+          className="mt-20 max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-120 gap-y-24 justify-start pb-24">
           <LanguageCard icon={<FaPython color="#3776AB" />} name="Python" />
           <LanguageCard icon={<FaJava color="#5382A1" />} name="Java" />
           <LanguageCard icon={<FaJsSquare color="#F0DB4F" />} name="JavaScript" />
           <LanguageCard icon={<FaHtml5 color="#E44D26" />} name="HTML" />
         </motion.div>
       </div>
-      {/*Project container*/}
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.9 }}
-        className="w-full mt-10 pb-32"
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_550px] gap-8 items-start px-6 sm:px-150">
-          <div className="col-span-1">
-            <div className="mb-12">
-              <h3 className="uppercase tracking-widest font-semibold text-[#8b5cf6] text-xs mb-2">
+        style={{ marginTop: "40px", paddingBottom: "128px" }}
+        className="w-full">
+        <div className="max-w-[1800px] mx-auto px-10 sm:px-12">
+
+          <div style={{ maxWidth: "1200px", margin: "0" }} className="flex flex-col items-start">
+
+            <div style={{ marginBottom: "48px" }}>
+              <h3
+                style={{ fontSize: "12px" }}
+                className="uppercase tracking-widest font-semibold text-[#8b5cf6] mb-2"
+              >
                 My Work
               </h3>
-              <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight max-w-3xl">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
                 Projects I've Built
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[1, 2, 3, 4].map((project) => (
-                <div
-                  key={project}
-                  className="rounded-3xl p-[3px] bg-gradient-to-r from-[#8b5cf6] via-[#a855f7] to-[#06b6d4]"
-                >
-                  <div className="bg-gray-900 bg-opacity-40 backdrop-blur-md rounded-3xl p-6 flex flex-col h-full shadow-lg">
-                    <div className="mb-4 rounded-xl overflow-hidden h-48 bg-gray-800 flex items-center justify-center">
-                      <span className="text-gray-600 italic">Project Image</span>
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-2 text-white">
-                      Project Title {project}
-                    </h3>
-                    <p className="text-gray-300 flex-grow">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div className="mt-4 flex space-x-4">
-                      <a
-                        href="#"
-                        className="px-4 py-2 border border-indigo-600 hover:border-indigo-500 rounded-md text-indigo-400 hover:text-indigo-300 text-sm font-semibold transition"
-                      >
-                        Source Code
-                      </a>
+            {/*Projects*/}
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] gap-8 items-start justify-between w-full">
+
+              {/* Project Cards*/}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[1, 2, 3, 4].map((project) => ( //4 projects for now
+                  <div
+                    key={project}
+                    className="rounded-3xl p-[3px] bg-gradient-to-r from-[#8b5cf6] via-[#a855f7] to-[#06b6d4]"
+                  >
+                    <div style={{ padding: "24px", minHeight: "380px" }} className="bg-gray-900 bg-opacity-40 backdrop-blur-md rounded-3xl flex flex-col h-full shadow-lg">
+                      <div style={{ marginBottom: "16px", height: "140px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "48px" }} className="rounded-xl overflow-hidden bg-gray-800">
+                        <FaBriefcase color="#8b5cf6" />
+                      </div>
+
+                      <h3 style={{ fontSize: "22px" }} className="font-semibold mb-2 text-white">
+                        Project Title {project}
+                      </h3>
+
+                      <p style={{ fontSize: "16px" }} className="text-gray-300 flex-grow">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                      </p>
+
+                      <div style={{ marginTop: "16px", display: "flex", gap: "12px" }}>
+                        <a
+                          href="#"
+                          style={{ padding: "8px 16px", fontSize: "14px" }}
+                          className="border border-indigo-600 hover:border-indigo-500 rounded-md text-indigo-400 hover:text-indigo-300 font-semibold transition"
+                        >
+                          Source Code
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
+                ))}
+              </div>
 
-          <div className="lg:sticky lg:top-20 flex justify-end">
-            <ContactCard gifSrc="/robot-speaking.gif" />{" "}
+              {/*Bowler GIF, named as ContactCard since it was a ContactCard then I changed it*/}
+              <div style={{ width: "400px" }} className="lg:sticky lg:top-20 flex justify-center">
+                <ContactCard gifSrc="/bowl.gif" />{" "}
+              </div>
+
+            </div>
           </div>
         </div>
       </motion.div>
 
-      {/*Achievements and Road Map*/}
+      {/*Achievements*/}
       <div className="max-w-[1800px] mx-auto px-10 sm:px-12">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.2 }}
-          className="mt-10"
-        >
+          className="mt-10">
           <h3 className="uppercase tracking-widest font-semibold text-[#8b5cf6] text-xs mb-2">
             Achievements
           </h3>
@@ -283,14 +294,13 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/*Road Map Container*/}
+        {/*Road Map*/}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.5 }}
-          className="mt-32 max-w-3xl mx-auto"
-        >
-          {/*Road Map*/}
+          transition={{ duration: 1, delay: 3.1 }}
+          className="mt-32 max-w-3xl mx-auto">
+
           <div className="">
             <h3 className="uppercase tracking-widest font-semibold text-[#8b5cf6] text-xs mb-2 text-center sm:text-left">
               Future Plans
@@ -334,11 +344,11 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/*University Experience Section*/}
+        {/*University Experience*/}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2.8 }}
+          transition={{ duration: 1, delay: 3.4 }}
           className="mt-32 pb-32"
         >
           <h3 className="uppercase tracking-widest font-semibold text-[#8b5cf6] text-xs mb-2 text-center">
