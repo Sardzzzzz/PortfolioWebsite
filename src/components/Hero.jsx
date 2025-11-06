@@ -368,7 +368,7 @@ export default function Hero() {
             <h4 className="text-2xl font-semibold text-white mb-4">
               Bachelor of Science in Computer Science
             </h4>
-            <p className="text-gray-300 mb-2">University of Example — 2018 to 2022</p>
+            <p className="text-gray-300 mb-2">HOLY ANGEL UNIVERSITY</p>
             <p className="text-gray-300">
               Graduated with honors. TBA
             </p>
