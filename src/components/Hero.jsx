@@ -180,7 +180,13 @@ export default function Hero() {
           </h2>
 
           <p className="text-lg sm:text-xl text-gray-300 max-w-xl leading-[1.7]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            I am a Computer Science student of Holy Angel University with a solid foundation in backend development and programming. 
+            Skilled in Python and some experience in Java, I also have good experience in DBMS (Firebase NoSQL, PostgreSQL, and Supabase). 
+            I have some experience in frontend development using JavaScript, JSX, and React to build responsive and interactive web applications. 
+            I demonstrate solid logical reasoning and problem-solving abilities.  
+            I am adaptive and willing to learn new concepts and technologies to further expand my tech-stack. 
+            I also possess basic knowledge in the application of machine learning concepts and models, with the ability to contribute to research-oriented projects. 
+            Recognized as a flexible, dependable, and collaborative team player who can perform effectively under pressure while maintaining high-quality standards.
           </p>
         </motion.div>
 
