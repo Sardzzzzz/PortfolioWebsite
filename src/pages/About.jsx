@@ -19,7 +19,7 @@ export default function About() {
         className="max-w-3xl text-lg md:text-xl text-gray-300"
       >
         <p>
-          I’m Kurt Sardes — a passionate developer who builds sleek, interactive, and modern websites that stand out. I love turning ideas into working digital experiences and constantly learning new tech.
+          I’m Kurt Sardes, a passionate developer who builds sleek, interactive, and modern websites that stand out. I love turning small curiosities into solutions!
         </p>
         <p className="mt-4">
         </p>
