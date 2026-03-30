@@ -42,7 +42,7 @@ export default function Contact() {
         (result) => {
           setLoading(false);
           setShowToast(true);
-          setStatus("Success! Your message is on its way.");
+          setStatus("Your message will now touch Kurt.");
           form.current.reset();
           if (textareaRef.current) textareaRef.current.style.height = "auto";
         },
