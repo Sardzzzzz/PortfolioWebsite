@@ -4,16 +4,13 @@ import { useRef, useState } from "react";
 
 export default function Contact() {
   const form = useRef();
-  const textareaRef = useRef(null); // Ref for the auto-expanding textarea
+  const textareaRef = useRef(null);
   const [loading, setLoading] = useState(false);
 
-  // Function to handle auto-expansion
   const handleTextareaChange = (e) => {
     const element = textareaRef.current;
     if (element) {
-      // Reset height to calculate scrollHeight correctly
       element.style.height = "auto";
-      // Set height to scrollHeight (content height)
       element.style.height = `${element.scrollHeight}px`;
     }
   };
@@ -92,8 +89,7 @@ export default function Contact() {
           required
           className="px-4 py-3 rounded-xl bg-white text-slate-950 placeholder-slate-400 focus:outline-none border border-slate-200 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition shadow-sm"
         />
-        
-        {/* UPDATED TEXTAREA: Added ref, onChange, and removed fixed rows */}
+
         <textarea
           ref={textareaRef}
           name="message"
