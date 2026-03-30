@@ -233,7 +233,7 @@ export default function Hero() {
 
             <div className="w-full h-full rounded-full overflow-hidden bg-white">
               <img
-                src="/kurtsss.png"
+                src="/kurt.png"
                 alt="Kurt Sardes"
                 className="w-full h-full object-cover rounded-full"
                 draggable={false} />
