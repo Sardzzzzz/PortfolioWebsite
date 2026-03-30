@@ -445,7 +445,7 @@ export default function Hero() {
                 <li>Handled PC maintenance and hardware component upgrades for NUC systems.</li>
                 <li>Performed advanced troubleshooting for Microsoft 365 applications.</li>
                 <li>Assisted in employee onboarding and technical setups for new hires.</li>
-                <li>Applied methodological approaches to diagnose and resolve network issues.</li>
+                <li>Applied methodological approaches to diagnose and resolve network, hardware, and software issues.</li>
               </ul>
             </div>
           </div>
