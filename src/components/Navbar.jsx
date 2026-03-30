@@ -22,14 +22,6 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              to="/about"
-              className="text-lg font-semibold text-white hover:text-gray-300 transition-colors"
-            >
-              Socials
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/resume"
               className="text-lg font-semibold text-white hover:text-gray-300 transition-colors"
             >
