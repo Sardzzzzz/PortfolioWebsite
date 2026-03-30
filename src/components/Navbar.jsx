@@ -25,7 +25,7 @@ export default function Navbar() {
               to="/about"
               className="text-lg font-semibold text-white hover:text-gray-300 transition-colors"
             >
-              About
+              Socials
             </Link>
           </li>
           <li>

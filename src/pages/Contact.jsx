@@ -4,7 +4,19 @@ import { useRef, useState } from "react";
 
 export default function Contact() {
   const form = useRef();
+  const textareaRef = useRef(null); // Ref for the auto-expanding textarea
   const [loading, setLoading] = useState(false);
+
+  // Function to handle auto-expansion
+  const handleTextareaChange = (e) => {
+    const element = textareaRef.current;
+    if (element) {
+      // Reset height to calculate scrollHeight correctly
+      element.style.height = "auto";
+      // Set height to scrollHeight (content height)
+      element.style.height = `${element.scrollHeight}px`;
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +38,8 @@ export default function Contact() {
           console.log("Success:", result.text);
           alert("Message sent successfully!");
           form.current.reset();
+          // Reset textarea height after sending
+          if (textareaRef.current) textareaRef.current.style.height = "auto";
           setLoading(false);
         },
         (error) => {
@@ -78,13 +92,18 @@ export default function Contact() {
           required
           className="px-4 py-3 rounded-xl bg-white text-slate-950 placeholder-slate-400 focus:outline-none border border-slate-200 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition shadow-sm"
         />
+        
+        {/* UPDATED TEXTAREA: Added ref, onChange, and removed fixed rows */}
         <textarea
+          ref={textareaRef}
           name="message"
           placeholder="Your Message"
-          rows={5}
           required
-          className="px-4 py-3 rounded-xl bg-white text-slate-950 placeholder-slate-400 focus:outline-none border border-slate-200 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition shadow-sm"
+          onChange={handleTextareaChange}
+          style={{ minHeight: "120px", overflow: "hidden" }} // Prevents initial tiny box and scrollbars
+          className="px-4 py-3 rounded-xl bg-white text-slate-950 placeholder-slate-400 focus:outline-none border border-slate-200 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition shadow-sm resize-none"
         ></textarea>
+
         <motion.button
           type="submit"
           disabled={loading}
@@ -121,7 +140,6 @@ export default function Contact() {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=18kurt.sardes@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            /* 7. UPDATED: Links are now a solid indigo */
             className="text-indigo-600 font-medium hover:underline"
           >
             18kurt.sardes@gmail.com

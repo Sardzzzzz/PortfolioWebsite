@@ -21,7 +21,7 @@ export default function Resume() {
       >
         <div className="bg-gray-900 rounded-lg shadow-lg p-2 md:p-4">
           <iframe
-            src="/Resume_KurtSardes.pdf#zoom=120"
+            src="/Resume_KurtSardesLatest.pdf#zoom=120"
             title="Kurt Sardes Resume"
             className="w-[90vw] md:w-[60vw] h-[90vh] md:h-[85vh] rounded-lg border-none"
           ></iframe>
@@ -30,7 +30,7 @@ export default function Resume() {
 
       {/*Download Button to download pdf*/}
       <motion.a
-        href="/Resume_KurtSardes.pdf"
+        href="/Resume_KurtSardesLatest.pdf"
         download="Kurt_Sardes_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
